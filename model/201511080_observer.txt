@@ -1,0 +1,26 @@
+@startuml
+title Conditional - draw Triangle or Square
+
+Interface java.util.Observer{
+    update(Observable, Object arg) : void
+}
+
+class java.util.Observable{
+    +addObserver(Observer o) : void
+    +notifyObservers() : void
+    +hasChanged() : boolean
+    #setChanged() : void
+}
+
+java.util.Observable -> java.util.Observer 
+java.util.Observer ..> java.util.Observable
+
+class MomTurtle{
+    
+}
+class BabyTurtle{
+    
+}
+java.util.Observable <|-- BabyTurtle
+java.util.Observer <|-- MomTurtle
+@enduml
