@@ -6,16 +6,16 @@ import java.awt.geom.Point2D;
 
 public class TurtleMouseListener extends Turtle{
   public TurtleMouseListener() {
-   addMouseListener(new MouseAdapter(){ //anonymous
+   addMouseListener(new MouseAdapter(){
      public void mousePressed(MouseEvent e){
-       Point2D.Double p; // 자바라서해줌
-       //p = (Point2D.Double)e.getPoint(); 이렇게 캐스팅하면 안댐
-       p = toTurtlePos(e.getPoint()); //거북이가 어디있는지 알려주는 함수를 만듬
+       Point2D.Double p; 
+       
+       p = toTurtlePos(e.getPoint()); 
        double d=distance(p);
        double w=towards(p);
        heading(w);
        forward(d);
-       setStatusText("moving to "+p.toString()); // toString object값 가져오는거
+       setStatusText("moving to "+p.toString());
      }   
      public void mouseReleased(MouseEvent e){
        int value = 0;
@@ -29,7 +29,7 @@ public class TurtleMouseListener extends Turtle{
    addMouseMotionListener(new MouseMotionAdapter(){
      public void mouseDragged(MouseEvent e){
        Point2D.Double p;
-       p = toTurtlePos(e.getPoint()); //거북이가 어디있는지 알려주는 함수를 만듬
+       p = toTurtlePos(e.getPoint()); 
        moveTo(p);
        setStatusText("dragging to" + p.toString());
      }
