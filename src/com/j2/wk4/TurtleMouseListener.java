@@ -4,7 +4,7 @@ import java.awt.event.*;
 import ch.aplu.turtle.*;
 import java.awt.geom.Point2D;
 
-class TurtleMouseListener extends Turtle{
+public class TurtleMouseListener extends Turtle{
   public TurtleMouseListener() {
    addMouseListener(new MouseAdapter(){ //anonymous
      public void mousePressed(MouseEvent e){
@@ -17,6 +17,14 @@ class TurtleMouseListener extends Turtle{
        forward(d);
        setStatusText("moving to "+p.toString()); // toString object값 가져오는거
      }   
+     public void mouseReleased(MouseEvent e){
+       int value = 0;
+       if(value == 0) {
+         value = 255;
+       } else {
+         value = 0;
+       }
+     }  
    });
    addMouseMotionListener(new MouseMotionAdapter(){
      public void mouseDragged(MouseEvent e){
@@ -28,13 +36,4 @@ class TurtleMouseListener extends Turtle{
      
    });
   }
-}
-
-public class TurtleMouseObserverMain {
-  public static void main(String args[]){
-    TurtleMouseListener t = new TurtleMouseListener();
-    t.addStatusBar(20);
-    t.setStatusText("Press any drag");
-  
- } 
 }
