@@ -1,4 +1,4 @@
-package com.j2.wk5;
+package com.j2.wk5.Coffee;
 
 class DarkRost extends Beverage{
   public DarkRost(){

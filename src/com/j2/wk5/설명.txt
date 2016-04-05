@@ -1,0 +1,18 @@
+1.car
+
+javac -d classes/ -sourcepath src/ src/com/j2/wk5/Car/*.java
+java -cp classes/ com.j2.wk5.Car.Cartype
+
+Cartype을 실행하세요!
+decorator를 자동차
+프로젝트를 만들어 삽입해보았습니다.
+
+
+
+
+2.coffee
+
+*주의: (Start)buzzCoffe입니다 ㅠㅠ
+
+javac -d classes/ -sourcepath src/ src/com/j2/wk5/Coffee/*.java
+java -cp classes/ com.j2.wk5.Coffee.StartbuzzCoffee

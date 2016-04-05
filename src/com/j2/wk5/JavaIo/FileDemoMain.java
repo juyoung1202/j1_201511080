@@ -5,7 +5,7 @@
  * 
  * */
 
-package com.j2.wk6;
+package com.j2.wk5.JavaIo;
 
 import java.io.FileInputStream;
 import java.io.InputStream;

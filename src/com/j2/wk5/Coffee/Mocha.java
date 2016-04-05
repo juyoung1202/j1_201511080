@@ -1,4 +1,4 @@
-package com.j2.wk5;
+package com.j2.wk5.Coffee;
 
 class Mocha extends CondimentDecorator{
  Beverage beverage; // 값이 들어오는건 new Mocha()생성자가 실행될 때

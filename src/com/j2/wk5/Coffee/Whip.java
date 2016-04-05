@@ -1,4 +1,4 @@
-package com.j2.wk5;
+package com.j2.wk5.Coffee;
 
 
 public class Whip extends CondimentDecorator {
