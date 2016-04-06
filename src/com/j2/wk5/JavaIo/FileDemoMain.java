@@ -19,8 +19,8 @@ public class FileDemoMain{
   public static void main(String[] args) throws Exception{
     
     InputStream isReadme = null;
-    InputStream iskortxt = null;
-    BufferedReader brkortxt = null;
+    InputStream istxt = null;
+    BufferedReader brtxt = null;
     
     try{
       char c;
@@ -48,7 +48,34 @@ public class FileDemoMain{
       if(isReadme !=null)
         isReadme.close();
     }
-    
+    try{
+      String string;
+      char c;
+      int i;
+      File myhome2 = new File(System.getProperty("user.home"));//홈디렉토리
+      System.out.println("myhome is "+myhome2);
+
+      String cwd2=new File( "." ).getCanonicalPath();
+      System.out.println("current working dir is "+cwd2);
+
+      File readme2=new File(cwd2,"abc.txt");
+      System.out.println("readme file is "+readme2);
+
+      istxt=new FileInputStream(readme2);
+      InputStreamReader isrtxt=new InputStreamReader(istxt, "utf-8");
+      brtxt=new BufferedReader(isrtxt);
+      
+      while((string=brtxt.readLine())!=null) {
+        System.out.println("--"+string);
+      }
+    }
+    catch(Exception e){
+      e.printStackTrace();
+    }
+    finally{
+      if(brtxt !=null)
+        brtxt.close();
+    }
     
   }
 }
