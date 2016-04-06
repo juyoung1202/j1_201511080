@@ -66,7 +66,7 @@ public class FileDemoMain{
       brtxt=new BufferedReader(isrtxt);
       
       while((string=brtxt.readLine())!=null) {
-        System.out.println("--"+string);
+        System.out.println(":"+string);
       }
     }
     catch(Exception e){
