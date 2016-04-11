@@ -3,17 +3,22 @@ package com.j2.wk6.Pizzam;
 import java.util.ArrayList;
 
 public abstract class Pizza {
-  String name;
-  String dough;
-  String sauce;
-  ArrayList toppings = new ArrayList();
-  
-  void prepare(){
-   System.out.println("Preparing"+name);
-   System.out.println("Tossing dough ..");
-   System.out.println("adding sauce..");
+ String name;
+ String dough;
+ String sauce;
+ ArrayList toppings = new ArrayList();
+ 
+ void prepare() {
+  System.out.println("Preparing " + name);
+  System.out.println("Tossing dough...");
+  System.out.println("Adding sauce...");
+  System.out.println("Adding toppings: ");
+  for (int i = 0; i < toppings.size(); i++) {
+   System.out.println("   " + toppings.get(i));
   }
-  void bake() {
+ }
+  
+ void bake() {
   System.out.println("Bake for 25 minutes at 350");
  }
  
