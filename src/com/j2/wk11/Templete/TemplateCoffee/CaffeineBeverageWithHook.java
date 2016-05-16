@@ -8,6 +8,7 @@ public abstract class CaffeineBeverageWithHook {
    if(customerWantsCondiments()){
     addCondiments(); 
    }
+   endMaking();
   }
   public abstract void brew();
  
@@ -24,5 +25,7 @@ public abstract class CaffeineBeverageWithHook {
   public boolean customerWantsCondiments() {
     return true;
   }
-   
+  public void endMaking(){
+    System.out.println("stop Making------");
+  }
 }
