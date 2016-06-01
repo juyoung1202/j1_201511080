@@ -1,4 +1,4 @@
-package com.j2.wk13.state.gumballstate;
+package com.j2.wk13.state.gumballbroken;
 
 public class NoQuarterState implements State {
     GumballMachine gumballMachine;

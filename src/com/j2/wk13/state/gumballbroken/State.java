@@ -1,4 +1,4 @@
-package com.j2.wk13.state.gumballstate;
+package com.j2.wk13.state.gumballbroken;
 
 public interface State{
  public void insertQuarter();

@@ -1,31 +1,31 @@
-package com.j2.wk13.state.gumballstate;
+package com.j2.wk13.state.gumballbroken;
 import java.util.Random;
 
-public class HasQuarterState implements State {
+public class Fix implements State {
     GumballMachine gumballMachine;
  
-    public HasQuarterState(GumballMachine gumballMachine) {
+    public Fix(GumballMachine gumballMachine) {
         this.gumballMachine = gumballMachine;
     }
   
-    public void insertQuarter() {
-        System.out.println("You can't insert another quarter");
+    public void insertQuarter() { //여기서 dispanse까지 구현할 필요가 없음 애초에 getFix에 sold로 주었음
+        System.out.println("You don't use GumballMachine ");
     }
  
     public void ejectQuarter() {
-        System.out.println("Quarter returned");
+        System.out.println("You don't use GumballMachine ");
         gumballMachine.setState(gumballMachine.getNoQuarterState());
     }
  
     public void turnCrank() {
-        System.out.println("You turned...");
+        System.out.println("You don't use GumballMachine ");
         gumballMachine.setState(gumballMachine.getSoldState());
     }
 
     public void dispense() {
-        System.out.println("No gumball dispensed");
+        System.out.println("You don't use GumballMachine ");
     }
- public void StrangeQuarter() {
+    public void StrangeQuarter() {
         gumballMachine.setState(gumballMachine.getBrokenState());
         System.out.println("Broken GumballMachine");
     }

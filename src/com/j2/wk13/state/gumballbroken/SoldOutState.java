@@ -1,28 +1,27 @@
-package com.j2.wk13.state.gumballstate;
+package com.j2.wk13.state.gumballbroken;
 
-public class NoQuarterState implements State {
+public class SoldOutState implements State {
     GumballMachine gumballMachine;
  
-    public NoQuarterState(GumballMachine gumballMachine) {
+    public SoldOutState(GumballMachine gumballMachine) {
         this.gumballMachine = gumballMachine;
     }
  
  public void insertQuarter() {
-  System.out.println("You inserted a quarter");
-  gumballMachine.setState(gumballMachine.getHasQuarterState());
+  System.out.println("You can't insert a quarter, the machine is sold out");
  }
  
  public void ejectQuarter() {
-  System.out.println("You haven't inserted a quarter");
+  System.out.println("You can't eject, you haven't inserted a quarter yet");
  }
  
  public void turnCrank() {
-  System.out.println("You turned, but there's no quarter");
-  }
+  System.out.println("You turned, but there are no gumballs");
+ }
  
  public void dispense() {
-  System.out.println("You need to pay first");
- } 
+  System.out.println("No gumball dispensed");
+ }
  public void StrangeQuarter() {
         gumballMachine.setState(gumballMachine.getBrokenState());
         System.out.println("Broken GumballMachine");
@@ -32,6 +31,6 @@ public class NoQuarterState implements State {
         System.out.println("Fix GumballMachine");
     }
  public String toString() {
-  return "waiting for quarter";
+  return "sold out";
  }
 }

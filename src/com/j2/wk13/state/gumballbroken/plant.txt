@@ -1,0 +1,24 @@
+@startuml
+class GumballMachine {
+    state:State
+    -count:int
+    +GumballMachine(int)
+    +insertQuarter():void
+    +ejectQuarter():void
+    +turnCrank():void
+    +setState(State):void
+    +getState(State):void
+}
+interface State {
+    +insertQuarter():void
+    +ejectQuarter():void
+    +turnCrank():void
+    +dispense():void
+}
+State <|.. HasQuarter
+State <|.. NoQuarter
+State <|.. SoldOut
+State <|.. Sold
+GumballMachine -right-> State
+HasQuarter --> GumballMachine
+@enduml

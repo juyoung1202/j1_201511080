@@ -22,7 +22,14 @@ public class SoldOutState implements State {
  public void dispense() {
   System.out.println("No gumball dispensed");
  }
- 
+ public void StrangeQuarter() {
+        gumballMachine.setState(gumballMachine.getBrokenState());
+        System.out.println("Broken GumballMachine");
+    }
+    public void Fix() {
+        gumballMachine.setState(gumballMachine.getFixState());
+        System.out.println("Fix GumballMachine");
+    }
  public String toString() {
   return "sold out";
  }
